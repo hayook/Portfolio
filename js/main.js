@@ -88,7 +88,19 @@ scrollToSection.forEach(item => {
             }
         })
     })
-});  // add this property when scrolling
+}); 
+
+let hk = document.querySelector('footer a.developer'); 
+hk.addEventListener('click', function () {
+    menuLinks.forEach(link => {
+        if (hk.href === link.firstElementChild.href) {
+            link.click();
+        }
+    })
+})
+
+// generalize this for all the links by one logic
+// add this property when scrolling
 
 // Skill Seciton ========================================================================================
 
