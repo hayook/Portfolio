@@ -66,6 +66,7 @@ menuIcon.addEventListener('click', function () {
 // Scroll display =======================================================================================
 
 const scrollToSection = document.querySelectorAll('.scroll'); 
+const landing = document.querySelector('.landing');
 
 window.addEventListener('scroll',() => {
     if (window.scrollY > 120) {
@@ -73,7 +74,7 @@ window.addEventListener('scroll',() => {
     } else {
         scrollToSection[0].style.display = 'flex';
     }
-    if (window.scrollY > 780) {
+    if (window.scrollY > landing.offsetHeight + 120) {
         scrollToSection[1].style.display = 'none';
     } else {
         scrollToSection[1].style.display = 'flex';
@@ -110,7 +111,7 @@ const skills = document.querySelectorAll('#skills .skills .skill');
 
 let bool = true;
 window.addEventListener('scroll', function () {
-    if (this.scrollY >= 1390 && bool === true) {
+    if (this.scrollY >= (2 * landing.offsetHeight) && bool === true) {
         skillFilter[0].click()
         bool = false; 
     }
@@ -155,7 +156,7 @@ for (let i = 0; i < projects.length; i++) {
 
 let projectScroll = true; 
 window.addEventListener('scroll', function () { 
-    let ProjectHeight = 2085;
+    let ProjectHeight = 3 * landing.offsetHeight;
     for (let i = 0; i < projects.length; i++) {  
         if (window.scrollY >= ProjectHeight && projectScroll === true) {
             projects[i].classList.add('project-show')
@@ -164,6 +165,10 @@ window.addEventListener('scroll', function () {
     }
 })
 
+// Links Target =========================================================================================
+
+document.querySelectorAll('#about a').forEach(link => link.target = '_blank'); 
+document.querySelectorAll('#projects a').forEach(link => link.target = '_blank'); 
         
 
 

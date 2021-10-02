@@ -39,6 +39,7 @@ body {
     font-size: 1rem;
     background: var(--secondary-color);  
     color: var(--white);
+    overflow-x: hidden;
 }
 .container {
     padding: 0 15px;
