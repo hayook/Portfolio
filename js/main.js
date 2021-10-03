@@ -69,6 +69,11 @@ const scrollToSection = document.querySelectorAll('.scroll');
 const landing = document.querySelector('.landing');
 
 window.addEventListener('scroll',() => {
+    if (window.scrollY > 1) {
+        document.querySelector('header').classList.add('fix-header');
+    } else {
+        document.querySelector('header').classList.remove('fix-header');
+    }
     if (window.scrollY > 120) {
         scrollToSection[0].style.display = 'none';
     } else {
@@ -167,7 +172,8 @@ window.addEventListener('scroll', function () {
 
 // Links Target =========================================================================================
 
-document.querySelectorAll('#about a').forEach(link => link.target = '_blank'); 
+document.querySelectorAll('#about .social-media a').forEach(link => link.target = '_blank'); 
+document.querySelector('a.resume').target = '_blank';
 document.querySelectorAll('#projects a').forEach(link => link.target = '_blank'); 
         
 
