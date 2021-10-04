@@ -55,6 +55,10 @@ header {
     top: 0; left: 0; 
     z-index: 2;
     background: var(--secondary-color);
+    transition: var(--main-transition);
+}
+header.fix-header {
+    box-shadow: 0 0 10px 0 #000;
 }
 header .container {
     display: flex; 
@@ -120,9 +124,9 @@ header nav ul.show {
         justify-content: flex-start;
         padding: 20px; 
         position: absolute;
-        top: 77.95px; 
+        top: 58.34px; 
         right: -100%;  
-        height: calc(100vh - 77.95px); 
+        height: calc(100vh - 58.34px); 
         width: 70%; 
         background: var(--secondary-color);
         box-shadow: 0 25px 30px 0 #000; 
@@ -354,8 +358,6 @@ header .dark-mode i {
 
 /* Start Skills Section */
 #skills {
-    display: flex;
-    align-items: center;
     min-height: var(--sections-height);
     padding: var(--sections-padding);
 }
@@ -388,8 +390,7 @@ header .dark-mode i {
     background: var(--primary-color); 
     color: var(--black);
 }
-#skills .skills {
-    min-height: 296px; 
+#skills .skills { 
     display: none; 
     flex-direction: column;
     justify-content: flex-start;

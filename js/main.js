@@ -69,6 +69,12 @@ const scrollToSection = document.querySelectorAll('.scroll');
 const landing = document.querySelector('.landing');
 
 window.addEventListener('scroll',() => {
+    if (window.scrollY > 1) {
+        document.querySelector('header').classList.add('fix-header');
+    } else {
+        document.querySelector('header').classList.remove('fix-header');
+
+    }
     if (window.scrollY > 120) {
         scrollToSection[0].style.display = 'none';
     } else {
@@ -150,10 +156,6 @@ skillFilter.forEach(item => {
 
 const projects = document.querySelectorAll('.projects .project');
 
-for (let i = 0; i < projects.length; i++) {
-    projects[i].style.transform = (i % 2 === 0 ? 'translateX(-150px)' : 'translateX(150px)');
-}
-
 let projectScroll = true; 
 window.addEventListener('scroll', function () { 
     let ProjectHeight = 3 * landing.offsetHeight;
@@ -167,36 +169,6 @@ window.addEventListener('scroll', function () {
 
 // Links Target =========================================================================================
 
-document.querySelectorAll('#about a').forEach(link => link.target = '_blank'); 
-document.querySelectorAll('#projects a').forEach(link => link.target = '_blank'); 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.querySelectorAll('#about .social-media .icons a').forEach(link => link.target = '_blank');
+document.querySelector('#about a.resume').target = '_blank' 
+document.querySelectorAll('#projects a').forEach(link => link.target = '_blank');
