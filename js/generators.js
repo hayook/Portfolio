@@ -1,52 +1,45 @@
 // Skills Generator =====================================================================================
 
 for (let i = 0; i < mySkills.length; i++) {
-    let skillsCont = document.createElement('div'); 
+    let skillsCont = document.createElement('div');
     skillsCont.className = `${mySkills[i][0]}-skills skills`;
     for (let j = 1; j < mySkills[i].length; j++) {
-        let skill = document.createElement('div'); 
+        let skill = document.createElement('div');
         skill.className = 'skill';
-        let skillTitle = document.createElement('p'); 
-        skillTitle.appendChild(document.createTextNode(mySkills[i][j].skillTitle)); 
-        let progHolder = document.createElement('div'); 
-        progHolder.className = 'holder'; 
-        let skillProg = document.createElement('span'); 
-        skillProg.dataset.prog = `${mySkills[i][j].skillProg}%`;
-        // skillProg.setAttribute('data-prog', `${mySkills[i][j].skillProg}%`); 
-        progHolder.appendChild(skillProg); 
-        skill.appendChild(skillTitle); 
-        skill.appendChild(progHolder); 
+        let skillTitle = document.createElement('p');
+        skillTitle.appendChild(document.createTextNode(mySkills[i][j].skillTitle));
+        skill.innerHTML = mySkills[i][j].skillImage
+        skill.appendChild(skillTitle);
         skillsCont.appendChild(skill);
     }
-    document.querySelector('#skills .container').appendChild(skillsCont);
+    document.querySelector('#skills section.tech-list .container').appendChild(skillsCont);
 }
 
 // Projects Generator ===================================================================================
 
-let projectsCont = document.createElement('div'); 
+let projectsCont = document.createElement('div');
 projectsCont.className = 'projects'
 for (let i = 0; i < myProjects.length; i++) {
     let project = document.createElement('div');
     project.className = 'project';
-    project.style.transform = (i % 2 === 0 ? 'translateX(-150px)' : 'translateX(150px)');
-    let projectImage = document.createElement('img'); 
-    projectImage.src = `images/${myProjects[i].projectImage}`; 
-    projectImage.alt = 'Project Image'; 
-    let projectTitle = document.createElement('h2'); 
-    projectTitle.appendChild(document.createTextNode(myProjects[i].projectTitle)); 
+    let projectImage = document.createElement('img');
+    projectImage.src = `images/${myProjects[i].projectImage}`;
+    projectImage.alt = 'Project Image';
+    let projectTitle = document.createElement('h2');
+    projectTitle.appendChild(document.createTextNode(myProjects[i].projectTitle));
     let projectDescription = document.createElement('p');
-    projectDescription.className = 'description'; 
-    projectDescription.appendChild(document.createTextNode(myProjects[i].projectDescription));
-    let projectInfo = document.createElement('div'); 
-    projectInfo.className = 'info'; 
-    let projectLink = document.createElement('a'); 
-    projectLink.className = 'view'; 
-    projectLink.href = myProjects[i].projectLink; 
-    projectLink.appendChild(document.createTextNode('View Project')); 
+    projectDescription.className = 'description';
+    projectDescription.appendChild(document.createTextNode(myProjects[i].projectDescription || ''));
+    let projectInfo = document.createElement('div');
+    projectInfo.className = 'info';
+    let projectLink = document.createElement('a');
+    projectLink.className = 'view';
+    projectLink.href = myProjects[i].projectLink;
+    projectLink.appendChild(document.createTextNode('Live Demo'));
     projectLink.innerHTML += '<i class="fas fa-external-link-alt"></i>';
     let projectSource = document.createElement('a');
-    projectSource.className = 'github-src'; 
-    projectSource.href = myProjects[i].projectSource; 
+    projectSource.className = 'github-src';
+    projectSource.href = myProjects[i].projectSource;
     projectSource.appendChild(document.createTextNode('Source Code'));
     projectSource.innerHTML += '<i class="fab fa-github"></i>';
     projectInfo.appendChild(projectLink);

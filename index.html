@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Hayeddine Kelious</title>
 
     <!-- Title Bar Logo -->
-    <link rel="shortcut icon" type="image"href="images/icon-logo.png">
+    <link rel="shortcut icon" type="image" href="images/icon-logo.png">
 
     <!-- Normalize CSS File -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -29,8 +30,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div class="cover"></div>
     <div class="overlay"></div>
+
     <!-- Start Header -->
     <header>
         <div class="container">
@@ -48,14 +52,10 @@
                     <li><a href="#about" title="About">ABOUT</a></li>
                     <li><a href="#skills" title="Skills">SKILLS</a></li>
                     <li><a href="#projects" title="projects">PROJECTS</a></li>
-                    <li><a href="#contact" title="Contact">CONTACT</a></li>
+                    <!-- <li><a href="#contact" title="Contact">CONTACT</a></li> -->
                 </ul>
                 <div class="dark-mode">
                     <i class="far fa-sun"></i>
-                    <div class="holder">
-                        <div class="switch"></div>
-                    </div>
-                    <i class="far fa-moon"></i>
                 </div>
             </nav>
         </div>
@@ -69,8 +69,8 @@
             <div class="showcase">
                 <h1>Hi There,</h1>
                 <h1>I'm Hayeddine</h1>
-                <h1>Web Developer</h1>
-                <p>Front-End Developer | JavaScript Expert</p>
+                <h1>Software Engineer</h1>
+                <p>Full-Stack Web Developer</p>
                 <a href="mailto:hay.eddine8@gmail.com" class="contact" target="_blank">Contact me!</a>
             </div>
             <a href="#about" class="scroll">
@@ -87,20 +87,21 @@
             <div class="content">
                 <h1>Let Me Introduce My Self</h1>
                 <p class="about">
-                    I'm in my first year as a CS student, the first time i code was when i'm 13 years old.
-                    I'm interested in building new web technologies and products  
+                    I am Kelious Hayeddine a 21 years old software engineer from Algeria, i am a third-year computer
+                    science student with over 2 years of experience in web development. I possess knowledge in a variety
+                    of technologies that enable me to code innovative solutions. Some of the technologies I specialize
+                    in include React.js, Express.js, MySQL, Python, and more.
                 </p>
-                <a href="#" class="resume">View Resume <i class="fas fa-external-link-alt"></i></a>
                 <div class="social-media">
                     <h2>I'm Social</h2>
                     <hr>
                     <div class="icons">
                         <a href="https://www.github.com/hayook"><i class="fab fa-github github"></i></a>
-                        <a href="https://www.facebook.com/alfataalanik"><i class="fab fa-facebook-f facebook"></i></a>
-                        <a href="https://www.instagram.com/its.hayoo"><i class="fab fa-instagram instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/hayeddine-kelious-70a494229/"><i
+                                class="fab fa-linkedin"></i></a>
                         <a href="https://www.twitter.com/k_hayoo"><i class="fab fa-twitter twitter"></i></a>
                         <a href="mailto:hay.eddine8@gmail.com"><i class="fas fa-envelope email"></i></a>
-                        <a href="https://www.codepen.io/hayook"><i class="fab fa-codepen codepen"></i></a>
+                        <!-- <a href="https://www.codepen.io/hayook"><i class="fab fa-codepen codepen"></i></a> -->
                     </div>
                 </div>
             </div>
@@ -112,18 +113,21 @@
         </div>
     </section>
     <!-- End About Section -->
-    
+
     <!-- Start Skills Section -->
     <section id="skills">
         <div class="container">
             <h1 class="sections-heading">Skills</h1>
             <ul>
-                <li data-skill=".languages-skills" class="active ">Languages</li>
-                <li data-skill=".frameworks-skills">Frameworks</li>
-                <li data-skill=".tools-skills">Tools</li>
-                <li data-skill=".soft-skills">Soft Skills</li>
+                <li data-skill=".languages-skills" class="active ">ProgrammingLanguages</li>
+                <li data-skill=".frameworks-skills">Web Technologies</li>
+                <li data-skill=".databases-skills">Databases</li>
+                <li data-skill=".tools-skills">Other Tools</li>
             </ul>
         </div>
+        <section class="tech-list">
+            <div class="container"></div>
+        </section>
     </section>
     <!-- End Skills Section -->
 
@@ -137,7 +141,7 @@
     <!-- End Projects Section -->
 
     <!-- Start Contact Section -->
-    <section id="contact">
+    <!-- <section id="contact">
         <div class="container">
             <h1>Feel free to contact me</h1>
             <form>
@@ -147,18 +151,18 @@
                 <input type="submit" value="Send">
             </form>
         </div>
-    </section>
+    </section> -->
     <!-- End Contact Section -->
 
     <!-- Start Footer -->
     <footer>
         <div class="container">
             <p class="developer">
-                <span><i class="fas fa-user"></i> Designed and Developed by</span> 
+                <span><i class="fas fa-user"></i> Designed and Developed by</span>
                 <a class="developer" href="#about">Hayeddine Kelious</a>
             </p>
             <p class="copyright">
-                Copyright &copy; 2021 HK
+                Copyright &copy; 2023 HK
             </p>
         </div>
     </footer>
@@ -173,6 +177,7 @@
     <!-- Main JS File -->
     <script src="js/main.js"></script>
 
-    
+
 </body>
+
 </html>

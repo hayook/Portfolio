@@ -1,53 +1,58 @@
 .landing {
-    position: relative;
     opacity: 0;
-    animation: fade .5s ease-in-out .2s forwards; 
+    animation: fade .5s ease-in-out .2s forwards;
 }
-.landing::before {
-    content: '';
-    width: 100%; 
-    height: 100%; 
-    background: #121634; 
-    position: absolute;
-    top: 0; 
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background: #121634;
+    position: fixed;
+    top: 0;
     right: 0;
-    z-index: 3; 
+    z-index: 5;
     animation: landing-overlay .5s ease-in-out .7s forwards;
 }
+
 .landing .showcase {
-    opacity: 0; 
+    opacity: 0;
     transform: translateY(70px);
-    animation: fade .5s ease-in-out 1.2s forwards, 
-    showcase .5s ease-out 1.2s forwards;
+    animation: fade .5s ease-in-out 1.2s forwards,
+        showcase .5s ease-out 1.2s forwards;
 }
-.landing .showcase h1, 
+
+.landing .showcase h1,
 .landing .showcase p {
     position: relative;
 }
-.landing .showcase h1::before, 
+
+.landing .showcase h1::before,
 .landing .showcase p::before {
     content: '';
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background: var(--primary-color);
     position: absolute;
-    top: 0; 
+    top: 0;
     right: 0;
     animation: showcase-cover .5s ease 1.7s forwards
 }
+
 header {
-    transform: translateY(-78px); 
+    transform: translateY(-78px);
     animation: header .5s ease 1.7s forwards;
 }
+
 .landing .showcase a {
     transform: translateX(200px);
     opacity: 0;
     animation: showcase-contact .5s ease 1.7s forwards
-
 }
+
 .landing .showcase p::before {
     animation: showcase-cover .5s ease 1.8s forwards
 }
+
 .landing .scroll {
     opacity: 0;
 }
@@ -64,30 +69,35 @@ header {
 
 @keyframes landing-overlay {
     100% {
-        width: 0; 
+        width: 0;
     }
 }
+
 @keyframes fade {
     100% {
-        opacity: 1; 
+        opacity: 1;
     }
 }
+
 @keyframes showcase {
     100% {
         transform: translateY(0);
     }
 }
+
 @keyframes showcase-cover {
     100% {
-        width: 0; 
+        width: 0;
     }
 }
+
 @keyframes showcase-contact {
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 @keyframes about-scroll {
     100% {
         opacity: 1;
