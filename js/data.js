@@ -127,6 +127,11 @@ let mySkills = [
 
 let myProjects = [
   {
+    projectImage: 'rcee.png',
+    projectTitle: 'Remote Code Execution Engine',
+    projectSource: 'https://github.com/hayook/RCEE',
+  },
+  {
     projectImage: 'flags-quiz.png',
     projectTitle: 'Flags Quiz',
     projectLink: 'https://hayook.github.io/flags-quiz/',
@@ -137,11 +142,5 @@ let myProjects = [
     projectTitle: 'Teacher Home Page Template',
     projectLink: 'https://hayook.github.io/Teacher-Home/',
     projectSource: 'https://github.com/hayook/Teacher-Home',
-  },
-  {
-    projectImage: 'project2.png',
-    projectTitle: 'Kasper Template',
-    projectLink: 'https://hayook.github.io/Kasper-Template/',
-    projectSource: 'https://github.com/hayook/Kasper-Template',
   },
 ];

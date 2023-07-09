@@ -32,17 +32,19 @@ for (let i = 0; i < myProjects.length; i++) {
     projectDescription.appendChild(document.createTextNode(myProjects[i].projectDescription || ''));
     let projectInfo = document.createElement('div');
     projectInfo.className = 'info';
-    let projectLink = document.createElement('a');
-    projectLink.className = 'view';
-    projectLink.href = myProjects[i].projectLink;
-    projectLink.appendChild(document.createTextNode('Live Demo'));
-    projectLink.innerHTML += '<i class="fas fa-external-link-alt"></i>';
+    if (!!myProjects[i].projectLink) {
+        let projectLink = document.createElement('a');
+        projectLink.className = 'view';
+        projectLink.href = myProjects[i].projectLink;
+        projectLink.appendChild(document.createTextNode('Live Demo'));
+        projectLink.innerHTML += '<i class="fas fa-external-link-alt"></i>';
+        projectInfo.appendChild(projectLink);
+    }
     let projectSource = document.createElement('a');
     projectSource.className = 'github-src';
     projectSource.href = myProjects[i].projectSource;
     projectSource.appendChild(document.createTextNode('Source Code'));
     projectSource.innerHTML += '<i class="fab fa-github"></i>';
-    projectInfo.appendChild(projectLink);
     projectInfo.appendChild(projectSource);
     project.appendChild(projectImage);
     project.appendChild(projectTitle);
