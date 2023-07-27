@@ -79,6 +79,10 @@
      width: 40px;
  }
 
+:root[theme="light"] header .logo img {
+    filter: invert(1);
+}
+
  header nav {
      display: flex;
      align-items: center;
