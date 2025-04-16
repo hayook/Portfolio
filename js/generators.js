@@ -15,46 +15,6 @@ for (let i = 0; i < mySkills.length; i++) {
     document.querySelector('#skills section.tech-list .container').appendChild(skillsCont);
 }
 
-// Projects Generator ===================================================================================
-
-let projectsCont = document.createElement('div');
-projectsCont.className = 'projects'
-for (let i = 0; i < myProjects.length; i++) {
-    let project = document.createElement('div');
-    project.className = 'project';
-    let projectImage = document.createElement('img');
-    projectImage.src = `images/${myProjects[i].projectImage}`;
-    projectImage.alt = 'Project Image';
-    let projectTitle = document.createElement('h2');
-    projectTitle.appendChild(document.createTextNode(myProjects[i].projectTitle));
-    let projectDescription = document.createElement('p');
-    projectDescription.className = 'description';
-    projectDescription.appendChild(document.createTextNode(myProjects[i].projectDescription || ''));
-    let projectInfo = document.createElement('div');
-    projectInfo.className = 'info';
-    if (!!myProjects[i].projectLink) {
-        let projectLink = document.createElement('a');
-        projectLink.className = 'view';
-        projectLink.href = myProjects[i].projectLink;
-        projectLink.appendChild(document.createTextNode('Live Demo'));
-        projectLink.innerHTML += '<i class="fas fa-external-link-alt"></i>';
-        projectInfo.appendChild(projectLink);
-    }
-    let projectSource = document.createElement('a');
-    projectSource.className = 'github-src';
-    projectSource.href = myProjects[i].projectSource;
-    projectSource.appendChild(document.createTextNode('Source Code'));
-    projectSource.innerHTML += '<i class="fab fa-github"></i>';
-    projectInfo.appendChild(projectSource);
-    project.appendChild(projectImage);
-    project.appendChild(projectTitle);
-    project.appendChild(projectDescription);
-    project.appendChild(projectInfo);
-    projectsCont.appendChild(project);
-}
-document.querySelector('a.all-projects').before(projectsCont);
-
-
 /* 
     <div class="languages-skills skills">
                 <div class="skill">

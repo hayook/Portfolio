@@ -128,3 +128,16 @@ document.querySelectorAll('#projects a').forEach(link => link.target = '_blank')
 // Links Target =========================================================================================
 
 document.querySelector("footer span#date").innerHTML = new Date().getFullYear();
+
+// Initialize Swiper
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	autoplay: { delay: 2700 },
+	loop: true,
+	grabCursor: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});

@@ -556,56 +556,6 @@
      padding: var(--sections-padding);
  }
 
- #projects .projects {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
-
- #projects .projects .project {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     border: 1px solid var(--primary-color);
-     border-radius: 10px;
-     padding: 20px;
-     margin-bottom: 40px;
-     width: 600px;
- }
-
- @media (max-width: 767px) {
-     #projects .projects .project {
-         width: 100%;
-     }
- }
-
- #projects .projects .project img {
-     width: 100%;
- }
-
- #projects .projects .project h2 {
-     margin-top: 20px;
- }
-
- #projects .projects .project p.description {
-     margin: 15px 0;
- }
-
- #projects .projects .project .info {
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
-
- @media (max-width: 767px) {
-     #projects .projects .project .info {
-         flex-direction: column;
-     }
- }
-
- #projects .projects .project .info a.view,
- #projects .projects .project .info a.github-src,
  #projects a.all-projects {
      display: block;
      padding: 10px 30px;
@@ -614,27 +564,27 @@
      color: var(--white);
  }
 
- #projects .projects .project .info a.view i,
- #projects .projects .project .info a.github-src i,
  #projects a.all-projects i {
      position: relative;
      left: 5px;
  }
 
- #projects .projects .project .info a {
-     margin: 0 30px;
+ #projects .swiper {
+     max-width: 800px;
  }
 
- @media (max-width: 767px) {
-     #projects .projects .project .info a.view {
-         margin-bottom: 20px;
-     }
+ #projects .swiper img.swiper-img {
+     max-width: 100%;
+ }
+
+ #projects .swiper .swiper-pagination .swiper-pagination-bullet {
+     background: var(--primary-color);
  }
 
  #projects a.all-projects {
      width: fit-content;
      margin: 0 auto;
-     margin-top: 50px;
+     margin-top: 30px;
  }
 
  /* End Projects Sections */
