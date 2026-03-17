@@ -470,10 +470,8 @@
      color: var(--black);
  }
 
- #skills section.tech-list {
-     margin: 30px 0;
-     padding: 70px 0;
-     background-color: #191919;
+ #skills .tech-list {
+     margin: 50px 0;
  }
 
  #skills .skills {
@@ -482,8 +480,6 @@
      justify-content: space-evenly;
      flex-wrap: wrap;
      width: 600px;
-     opacity: 0;
-     transform: translateX(-150px);
  }
 
  #skills .skills.animate-skills {
@@ -491,9 +487,13 @@
  }
 
  @keyframes animate-skills {
+	 0% {
+		 opacity: 0;
+		 transform: translateY(-8px);
+	 }
      100% {
          opacity: 1;
-         transform: translateX(0);
+         transform: translateY(0);
      }
  }
 
@@ -516,10 +516,14 @@
      height: 70px;
  }
 
+ [theme="light"] #skills div.skills .skill svg {
+	 filter: invert(1);
+ }
+
+
  #skills div.skills .skill p {
      font-weight: bolder;
      font-size: 1.3rem;
-     color: white;
  }
 
  #skills div.skills .skill .holder {

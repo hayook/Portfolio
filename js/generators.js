@@ -12,7 +12,7 @@ for (let i = 0; i < mySkills.length; i++) {
         skill.appendChild(skillTitle);
         skillsCont.appendChild(skill);
     }
-    document.querySelector('#skills section.tech-list .container').appendChild(skillsCont);
+    document.querySelector('#skills .tech-list').appendChild(skillsCont);
 }
 
 /* 
