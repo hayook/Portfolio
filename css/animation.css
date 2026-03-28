@@ -38,11 +38,6 @@
     animation: showcase-cover .5s ease 1.7s forwards
 }
 
-header {
-    transform: translateY(-78px);
-    animation: header .5s ease 1.7s forwards;
-}
-
 .landing .showcase a {
     transform: translateX(200px);
     opacity: 0;
@@ -56,16 +51,6 @@ header {
 .landing .scroll {
     opacity: 0;
 }
-
-
-@keyframes header {
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-
 
 @keyframes landing-overlay {
     100% {
