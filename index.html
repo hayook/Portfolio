@@ -17,9 +17,6 @@
     <!-- FontAwesome CSS File -->
     <link rel="stylesheet" href="css/all.min.css">
 
-    <!-- Swiper CSS File -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Glebal CSS File -->
     <link rel="stylesheet" href="css/global.css">
 
@@ -33,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -91,16 +89,63 @@
     <section id="projects">
         <div class="container">
             <h1 class="sections-heading">Top Projects</h1>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img class="swiper-img" src="./images/rcee.png" /></div>
-                    <div class="swiper-slide"><img class="swiper-img" src="./images/freelync.png" /></div>
-                    <div class="swiper-slide"><img class="swiper-img" src="./images/neochip.png" /></div>
-                    <div class="swiper-slide"><img class="swiper-img" src="./images/dev-community.png" /></div>
-                </div>
-                <div class="swiper-pagination"></div>
+            
+            <div class="projects-wrapper">
+                
+                <article class="project">
+                    <div class="project-visual tilt-container">
+                        <div class="project-image-wrapper tilt-element">
+                            <img src="images/kernec.png" alt="Kernec - Programmable OS Simulator" class="project-image parallax-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-title">Kernec - Programmable OS Simulator</h2>
+                        <p class="project-desc">Kernec is a minimalist operating system simulator that lets you write high-level kernel policies in Lua while the C core handles the simulation main loop and timing.</p>
+                        <div class="tech-list">
+                            <span class="tech-item">C</span>
+                            <span class="tech-item">Lua</span>
+                        </div>
+                        <a href="https://www.github.com/hayook/kernec" class="all-projects project-source" target="_blank">Source Code <i class="fab fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-visual tilt-container">
+                        <div class="project-image-wrapper tilt-element">
+                            <img src="images/rcee.png" alt="Remote Code Execution Engine" class="project-image parallax-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-title">Remote Code Execution Engine</h2>
+                        <p class="project-desc">MeetCode is a remote code engine, in other words it's a web application where you write, compile and run your code, currently supported languages include C, Python and JavaScript, it's built using React and Node.js</p>
+                        <div class="tech-list">
+                            <span class="tech-item">React.js</span>
+                            <span class="tech-item">Express.js</span>
+                        </div>
+                        <a href="https://www.github.com/hayook/RCEE" class="all-projects project-source" target="_blank">Source Code <i class="fab fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-visual tilt-container">
+                        <div class="project-image-wrapper tilt-element">
+                            <img src="images/freelync.png" alt="Freelync - Freelancing platform clone" class="project-image parallax-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-title">Freelync - Freelancing platform clone</h2>
+                        <p class="project-desc">Freelync is a simple freelancing platform clone, where users can create offers with basic information such as title, description, budget, technologies required etc. Other features like edit, delete and search for offers, authentication are also implemented, in addition to authorization so that a user can not edit or delete offers of others.</p>
+                        <div class="tech-list">
+                            <span class="tech-item">React.js</span>
+                            <span class="tech-item">Express.js</span>
+                            <span class="tech-item">MySQL</span>
+                        </div>
+                        <a href="https://www.github.com/hayook/freelync-client" class="all-projects project-source" target="_blank">Source Code <i class="fab fa-github"></i></a>
+                    </div>
+                </article>
+
             </div>
+
             <a class="all-projects" href="https://hayook.github.io/">All Projects</i></a>
         </div>
     </section>
@@ -133,9 +178,6 @@
         </div>
     </footer>
     <!-- End Footer -->
-
-    <!-- Swiper JS Files -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Data JS File -->
     <script src="js/data.js"></script>
