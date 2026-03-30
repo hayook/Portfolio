@@ -41,7 +41,7 @@ document.querySelectorAll('#projects a').forEach(link => link.target = '_blank')
 
 // Links Target =========================================================================================
 
-document.querySelector("footer span#date").innerHTML = new Date().getFullYear();
+document.querySelector("footer span#date").innerHTML = `2021-${new Date().getFullYear()}`;
 
 // Project Showcase Logic ===============================================================================
 
