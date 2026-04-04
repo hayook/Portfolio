@@ -9,16 +9,11 @@ window.addEventListener('scroll', () => {
 	} else {
 		scrollToSection[0].style.display = 'flex';
 	}
-});
-
-scrollToSection.forEach(item => {
-	item.addEventListener('click', () => {
-		menuLinks.forEach(link => {
-			if (item.href === link.firstElementChild.href) {
-				link.click();
-			}
-		})
-	})
+	if (window.scrollY > landing.offsetHeight + 120) {
+		scrollToSection[1].style.display = 'none';
+	} else {
+		scrollToSection[1].style.display = 'flex';
+	}
 });
 
 let hk = document.querySelector('footer a.developer');
@@ -97,3 +92,56 @@ tiltContainers.forEach(container => {
         element.style.transition = `none`;
     });
 });
+
+// Contact Form Logic ===============================================================================
+
+const contactForm = document.querySelector('#about .contact-form form');
+const SUPABASE_KEY = "sb_publishable_QZEUBgT8QcrvxjJ6t6qSKQ_ge47EiBd";
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name').trim(),
+            email: formData.get('email').trim(),
+            message: formData.get('message').trim()
+        };
+
+        if (!data.name || !data.email || !data.message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        try {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            const response = await fetch("https://nrbfewztwiocubqbhhwd.supabase.co/functions/v1/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${SUPABASE_KEY}`,
+                    "apikey": SUPABASE_KEY,
+                },
+                body: JSON.stringify(data)
+            });
+
+
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
+            alert('Message sent successfully!');
+            contactForm.reset();
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again later.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+    });
+}

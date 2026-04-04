@@ -60,7 +60,15 @@
     <section id="about">
         <div class="container">
             <div class="content">
-                <h1>Let Me Introduce My Self</h1>
+                <div class="head">
+                    <div class="avatar-container">
+                        <img src="images/hayeddine_kelious.jpeg" alt="Hayeddine Kelious" class="avatar">
+                    </div>
+                    <div>
+                        <h1 class="name">Hayeddine Kelious</h1>
+                        <div class="role">Developer based in Algeria</div>
+                    </div>
+                </div>
                 <p class="about">
                     I am Kelious Hayeddine a <span id="desc-age"></span> years old software engineer from Algeria, i am a third-year computer
                     science student with over <span id="desc-experience"></span> years of experience in web development. I possess knowledge in a variety
@@ -68,19 +76,33 @@
                     in include React.js, Express.js, MySQL, Python, and more.
                 </p>
                 <div class="social-media">
-                    <h2>I'm Social</h2>
-                    <hr>
                     <div class="icons">
-                        <a href="https://www.github.com/hayook"><i class="fab fa-github github"></i></a>
+                        <a href="https://www.github.com/hayook"><i class="fab fa-github github"></i> GitHub</a>
                         <a href="https://www.linkedin.com/in/hayeddine-kelious-70a494229/"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://www.twitter.com/k_hayoo"><i class="fab fa-twitter twitter"></i></a>
-                        <a href="mailto:hay.eddine8@gmail.com"><i class="fas fa-envelope email"></i></a>
-                        <!-- <a href="https://www.codepen.io/hayook"><i class="fab fa-codepen codepen"></i></a> -->
+                                class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://www.x.com/k_hayoo"><i class="fab fa-twitter twitter"></i> Twitter</a>
+                        <a href="mailto:hay.eddine8@gmail.com"><i class="fas fa-envelope email"></i> Email</a>
                     </div>
                 </div>
             </div>
-            <img src="images/hayeddine.jpg" alt="Hayeddine Kelious">
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <a href="#projects" class="scroll">
+                <p>Projects</p>
+                <i class="fas fa-arrow-down"></i>
+            </a>
         </div>
     </section>
     <!-- End About Section -->
